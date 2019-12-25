@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AuthGuard],
     component: AdminComponent,
     data: { title: 'Blog Admin' }
   },
@@ -55,41 +57,49 @@ const routes: Routes = [
   },
   {
     path: 'category',
+    canActivate: [AuthGuard],
     component: CategoryComponent,
     data: { title: 'Category' }
   },
   {
     path: 'category/details/:id',
+    canActivate: [AuthGuard],
     component: CategoryDetailsComponent,
     data: { title: 'Category Details' }
   },
   {
     path: 'category/add',
+    canActivate: [AuthGuard],
     component: CategoryAddComponent,
     data: { title: 'Category Add' }
   },
   {
     path: 'category/edit/:id',
+    canActivate: [AuthGuard],
     component: CategoryEditComponent,
     data: { title: 'Category Edit' }
   },
   {
     path: 'post',
+    canActivate: [AuthGuard],
     component: PostComponent,
     data: { title: 'Post' }
   },
   {
     path: 'post/details/:id',
+    canActivate: [AuthGuard],
     component: PostDetailsComponent,
     data: { title: 'Post Details' }
   },
   {
     path: 'post/add',
+    canActivate: [AuthGuard],
     component: PostAddComponent,
     data: { title: 'Post Add' }
   },
   {
     path: 'post/edit/:id',
+    canActivate: [AuthGuard],
     component: PostEditComponent,
     data: { title: 'Post Edit' }
   }

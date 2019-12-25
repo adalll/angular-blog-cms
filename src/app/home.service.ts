@@ -5,7 +5,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { Category } from './category/category';
 import { Post } from './post/post';
 
-const apiUrl = 'http://localhost:3000/api/public/';
+const apiUrl = 'http://localhost:3000/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class HomeService {
   }
 
   getPostsByCategory(id: any): Observable<Post[]> {
-    return this.http.get<Post[]>(apiUrl + 'bycategory/' + id)
+    return this.http.get<Post[]>(apiUrl + 'post/bycategory/' + id)
       .pipe(
         tap(_ => this.log('fetched Posts')),
         catchError(this.handleError('getPosts', []))

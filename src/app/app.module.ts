@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { CKEditorModule } from 'ckeditor4-angular';
+import { MatContenteditableModule } from 'mat-contenteditable';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,26 @@ import { PostComponent } from './post/post.component';
 import { PostDetailsComponent } from './post/post-details/post-details.component';
 import { PostAddComponent } from './post/post-add/post-add.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule,
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatGridListModule,
+  MatListModule,
+  MatSelectModule
+} from '@angular/material';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -45,7 +67,30 @@ import { PostEditComponent } from './post/post-edit/post-edit.component';
     AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CKEditorModule,
+    MatContenteditableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatListModule,
+    MatSelectModule
   ],
   providers: [
     {

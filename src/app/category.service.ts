@@ -9,6 +9,7 @@ const apiUrl = 'http://localhost:3000/api/category/';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CategoryService {
 
   constructor(private http: HttpClient) { }
